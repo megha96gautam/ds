@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-navbar color="ds-primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Deepak The Inspiration</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h6>Quote of the day</h6>
+  <ion-row class="box-white" margin-top>
+    <ion-col>
+      <h1>"Every today is the first day of the rest of your future.Start a fresh everyday."</h1>
+    </ion-col>
+  </ion-row>
+  <h6>Daily Message</h6>
+  <ion-row class="box-white" margin-top>
+    <ion-slides>
+
+
+      <ion-slide>
+        <a href="#" (click)="goTo('So6DU2qVzPQ')">
+          <img src="assets/imgs/thumb/thumb01.jpg">
+        </a>
+      </ion-slide>
+
+      <ion-slide>
+          <a href="#" (click)="goTo('o1aelMUCkLo')">
+              <img src="assets/imgs/thumb/thumb02.jpg">
+            </a>
+      </ion-slide>
+      <ion-slide>
+          <a href="#" (click)="goTo('tmSjuOsCXYc')">
+              <img src="assets/imgs/thumb/thumb03.jpg">
+            </a>
+      </ion-slide>
+    </ion-slides>
+  </ion-row>
+  <ion-row margin-top>
+      <ion-col col-9 align-self-center>
+        <h6>
+          Upcoming Programs
+        </h6>
+      </ion-col>
+
+      <ion-col align-self-end>
+        <div class="small-text">
+          <a (click)="viewCategories()">View All</a>
+        </div>
+      </ion-col>
+
+    </ion-row>
+    <a href="#" (click)="upcoming();">
+  <ion-row class="box-red-1" >
+    <ion-col class="small-text">
+      In Jashn-E-Life on 5th August 2018, Deepak will speak on M for motivation.Come and experience the transformation.Venue BBGL
+      Hall, Basvangudi, 7
+    </ion-col>
+  </ion-row>
+</a>
+<ion-row margin-top class="box-white">
+  <ion-col col-3 align-self-start>
+    <img src="assets/imgs/ds01.png">
+  </ion-col>
+  <ion-col col-7 align-self-end>
+      <ion-input type="text" placeholder="How Do You Feel Today?"></ion-input>
+  </ion-col>
+</ion-row>
+  <ion-row margin-top>
+      <ion-col col-9 align-self-start>
+        <h6>
+          Instant Transformation
+        </h6>
+      </ion-col>
+
+      <ion-col align-self-end>
+        <div class="small-text">
+          <a href="#" (click)="goTochannel();">View All</a>
+        </div>
+      </ion-col>
+
+    </ion-row>
+  <ion-row class="box-white">
+    <ion-slides>
+      <ion-slide>
+        <a href="#" (click)="goTo('mlSSPeNhMFY')">
+          <img src="assets/imgs/thumb/thumb04.jpg">
+        </a>
+      </ion-slide>
+      <ion-slide>
+        <a href="#" (click)="goTo('BeNYdoDDPjk')">
+          <img src="assets/imgs/thumb/thumb04.jpg">
+        </a>
+      </ion-slide>
+      <ion-slide>
+        <a href="#" (click)="goTo('Qzslv2FlNYo')">
+          <img src="assets/imgs/thumb/thumb05.jpg">
+        </a>
+      </ion-slide>
+    </ion-slides>
+  </ion-row>
+</ion-content>

@@ -1,0 +1,46 @@
+<ion-content padding>
+  <ion-row justify-content-center>
+    <ion-col col-6>
+      <img src="assets/imgs/thumb/logo_small.png" width="320">
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-list>
+
+      <ion-item>
+        <ion-label fixed>Mobile</ion-label>
+        <ion-input type="text" value="" [(ngModel)]="userData.mobile"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Password [OTP]</ion-label>
+        <ion-input type="password" [(ngModel)]="userData.password"></ion-input>
+      </ion-item>
+    </ion-list>
+  </ion-row>
+  <ion-row>
+
+    <ion-col col-12>
+      <div>
+        <button ion-button full (click)="login(this.userData)" color="ds-primary">Login</button>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row justify-content-start>
+    <ion-col col-6>
+      <div>
+        <p class="small-text">
+          <a href="#" (click)="goToRegister()">Create Account?</a>
+        </p>
+      </div>
+    </ion-col> 
+    <ion-col col-6>
+      <div>
+        <p class="small-text">
+          <a href="#" (click)="goToForgot()">Forgot Password</a>
+        </p>
+      </div>
+    </ion-col>  
+
+  </ion-row>
+</ion-content>

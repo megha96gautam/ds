@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar color="ds-primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Music for the Soul</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-item *ngFor="let m of music_master" (click)="goTo(m.id)">
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/{{ m.image }}">
+          </ion-thumbnail>
+          <h2>{{ m.tittle }}</h2>
+          <p>&nbsp;</p>
+          <button ion-button clear item-end (click)="goTo(m.id)">
+            <ion-icon name="arrow-forward"></ion-icon>
+          </button>
+        </ion-item>
+        
+      </ion-list>
+
+</ion-content>
