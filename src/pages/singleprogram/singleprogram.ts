@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
+import { ProgramregisterPage } from '../programregister/programregister';
 
 
 @IonicPage()
@@ -15,12 +16,15 @@ export class SingleprogramPage {
   program:any;
   programName:any;
 
+  imageUrl = "http://deepaktheinspiration.com/api/uploads/";
+
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
     public authServiceProvider: AuthServiceProvider) {
 
       this.singleId = this.navParams.get('singleId');
+      console.log(this.singleId);
 
       this.getsingleprogram();
   }
@@ -46,13 +50,18 @@ export class SingleprogramPage {
       this.responseData = result;
       this.program = this.responseData.data;
       this.programName = this.program[0].p_name;
-      console.log(this.program[0].p_name);
+      console.log(this.program);
       
       
     
   }, (err)=>{
     //Connection failed or something like that
   })
+  }
+
+  programRegister(id:any){
+    this.navCtrl.push(ProgramregisterPage, {singleId: id});
+
   }
 
 }

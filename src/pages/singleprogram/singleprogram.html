@@ -12,9 +12,14 @@
    
   <ion-row style="background-color:white; padding:5px;">
     <ion-col *ngFor="let p of program">
-      
+      <img src="{{ imageUrl }}{{ p.p_banner }}">
       <p [innerHTML]="p.description"></p>
         
+    </ion-col>
+    <ion-col col-12>
+      <div>
+        <button ion-button full (click)="programRegister(singleId)" color="ds-primary">Register Here</button>
+      </div>
     </ion-col>
   </ion-row>
 

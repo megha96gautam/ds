@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
-import { LoginPage } from '../login/login';
+import { NewhomePage } from '../newhome/newhome';
 
 /**
- * Generated class for the ForgotPage page.
+ * Generated class for the ChangepasswordPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -12,37 +12,57 @@ import { LoginPage } from '../login/login';
 
 @IonicPage()
 @Component({
-  selector: 'page-forgot',
-  templateUrl: 'forgot.html',
+  selector: 'page-changepassword',
+  templateUrl: 'changepassword.html',
 })
-export class ForgotPage {
+export class ChangepasswordPage {
 
   responseData: any;
-  userData = {"mobile":""};
+  userId:any;
+  logind:any;
+  userDetails:any;
+  pageTitle:any = 'Change Password';
+  userData = {
+    "id":"",
+    "old_password":"", 
+    "new_password":"",
+  };
+
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
     public authServiceProvider: AuthServiceProvider,
     private toastCtrl: ToastController) {
-  }
+
+      const data = JSON.parse(localStorage.getItem('userData'));
+      this.userDetails = data.logindata;
+      console.log(this.userDetails.id);
+      this.userId = this.userDetails.id;
+      this.userData.id=this.userId;
+      }
+      
+  
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ForgotPage');
+    console.log('ionViewDidLoad ChangepasswordPage');
   }
-  forgot(){
+
+  changePassword(){
     let userData: any;
     //API Document here
-    if(this.userData.mobile){
+    if(this.userData.old_password && this.userData.new_password){
 
-      this.authServiceProvider.postData(this.userData, "forgot_password").then((result)=>{
+      console.log(this.userData);
+
+      this.authServiceProvider.postData(this.userData, "user_password_update").then((result)=>{
         this.responseData = result;
         console.log(this.responseData.status);
         if(this.responseData.status == 1){
-          //localStorage.setItem('userData', JSON.stringify(this.responseData))
-          this.navCtrl.push(LoginPage);
+          
+          this.navCtrl.push(NewhomePage);
         }else{
-          this.presentToast('Mobile does not exist');
+          this.presentToast('Wrong username or password');
         }
         
 
@@ -51,9 +71,11 @@ export class ForgotPage {
         //Connection failed or something like that
       })
     }else{
-      this.presentToast('Give Mobile Number');
+      this.presentToast('Give Username and Password');
     }
+    
   }
+
   presentToast(msg) {
     const toast = this.toastCtrl.create({
       message: msg,

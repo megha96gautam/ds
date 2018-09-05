@@ -32,6 +32,10 @@ import { MusicPage } from '../pages/music/music';
 import { ContactPage } from '../pages/contact/contact';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { ForgotPage } from '../pages/forgot/forgot';
+import { ChangepasswordPage } from '../pages/changepassword/changepassword';
+import { ProgramregisterPage } from '../pages/programregister/programregister';
+import { TestimonialsPage } from '../pages/testimonials/testimonials';
+import { TallstoriesPage } from '../pages/tallstories/tallstories';
 
 
 
@@ -56,7 +60,11 @@ import { ForgotPage } from '../pages/forgot/forgot';
     MusicPage,
     ContactPage,
     MfsPage,
-    ForgotPage
+    ForgotPage,
+    ChangepasswordPage,
+    ProgramregisterPage,
+    TestimonialsPage,
+    TallstoriesPage
 
   ],
   imports: [
@@ -86,7 +94,11 @@ import { ForgotPage } from '../pages/forgot/forgot';
     MusicPage,
     ContactPage,
     MfsPage,
-    ForgotPage
+    ForgotPage,
+    ChangepasswordPage,
+    ProgramregisterPage,
+    TestimonialsPage,
+    TallstoriesPage
      
   ],
   providers: [

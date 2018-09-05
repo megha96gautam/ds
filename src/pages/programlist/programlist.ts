@@ -21,6 +21,8 @@ export class ProgramlistPage {
   responseData:any;
   programlist:any;
   programName:any;
+
+  imageUrl = "http://deepaktheinspiration.com/api/uploads/";
   
 
   constructor(
@@ -52,10 +54,7 @@ export class ProgramlistPage {
       //console.log(result);
       this.responseData = result;
       this.programlist = this.responseData.data;
-      
-      
-      
-    
+      console.log(this.programlist);
   }, (err)=>{
     //Connection failed or something like that
   })

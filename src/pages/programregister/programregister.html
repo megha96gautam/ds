@@ -1,0 +1,54 @@
+<!--
+  Generated template for the ProgramregisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>programregister</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row>
+    <ion-list>
+        <ion-item>
+          <ion-label fixed>First Name</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="userData.first_name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label fixed>Last Name</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="userData.last_name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label fixed>Email</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="userData.email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label fixed>Mobile</ion-label>
+          <ion-input type="text" [(ngModel)]="userData.mobile"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed> </ion-label>
+          <ion-input type="hidden" [(ngModel)]="userData.p_id"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col col-12>
+        <div>
+          <button ion-button full (click)="doregister(this.userData);" color="ds-primary">Register Here</button>
+
+        </div>
+        
+      </ion-col>
+      </ion-row>
+</ion-content>

@@ -22,8 +22,12 @@ import { MusicPage } from '../pages/music/music';
 import { ContactPage } from '../pages/contact/contact';
 import { MfsPage } from '../pages/mfs/mfs';
 import { ForgotPage } from '../pages/forgot/forgot';
+import { ChangepasswordPage } from '../pages/changepassword/changepassword';
+import {ProgramregisterPage} from '../pages/programregister/programregister';
 
 import { SocialSharing } from '@ionic-native/social-sharing';
+import { TestimonialsPage } from '../pages/testimonials/testimonials';
+import { TallstoriesPage } from '../pages/tallstories/tallstories';
 
 
 @Component({
@@ -54,7 +58,10 @@ export class MyApp {
       { title: 'Simplifying Life', component: VideoPage },
       { title: 'About', component: AboutPage},
       { title: 'Contact Us', component: ContactPage},
-      { title: 'Logout', component: LogoutPage }
+      { title: 'Logout', component: LogoutPage },
+      { title: 'Change Password', component: ChangepasswordPage },
+      {title:'Testimonials', component:TestimonialsPage},
+      {title:'Tall Stories', component:TallstoriesPage}
       
     ];
 

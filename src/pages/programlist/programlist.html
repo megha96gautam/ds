@@ -17,7 +17,7 @@
   <ion-list margin-top>
     <ion-item *ngFor="let p of programlist">
       <ion-thumbnail item-start>
-        <img src="assets/logo/{{ p.p_logo }}">
+        <img src="{{ imageUrl }}{{ p.p_logo }}">
       </ion-thumbnail>
       <h2 (click)="singleprogram(p.id)">{{ p.p_name }}</h2>
       <button ion-button clear item-end (click)="singleprogram(p.id)">

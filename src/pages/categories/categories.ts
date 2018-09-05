@@ -30,9 +30,7 @@ export class CategoriesPage {
    userData = {
      status:1, 
      
-    };
-    
-   
+    };  
       
     //API Document here
     this.authServiceProvider.postData(userData, "select_master_program").then((result)=>{
