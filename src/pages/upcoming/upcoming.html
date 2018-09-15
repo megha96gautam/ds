@@ -13,14 +13,14 @@
     <ion-row margin-bottom>
         <ion-col>
           <div class="box-red-1">
-            <img src="assets/imgs/pr01.png">
+            <img src="assets/imgs/up01.png">
           </div>
         </ion-col>
       </ion-row>
       <ion-list margin-top>
         <ion-item *ngFor="let p of program_master">
     
-          <h2>{{ p.p_name }}</h2>
+          <h2 text-wrap>{{ p.p_name }}</h2>
           <p>{{ p.p_date }}</p>
           <p>{{ p.from_time }} - {{ p.to_time }}</p>
           <p>{{ p.p_venue }}</p>

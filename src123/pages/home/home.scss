@@ -1,0 +1,44 @@
+page-home {
+  .box-white{
+    background-color: white;
+    padding: 10px;
+  }
+  .box-red-1{
+    background-color: #7f0000;
+    padding: 10px;
+    color: white;
+  }
+  ion-content{
+    background-color:#f7f7f7 !important;
+  }
+  h6{
+    font-size: 12px !important;
+    font-family: Marriwheather !important;
+  }
+  .small-text{
+    font-size: 10px;
+    font-family: Marriwheather !important; 
+  }
+  ion-slide{
+    width: 75% !important;
+    margin-right: 5px;
+  }
+  a{
+    text-decoration: none;
+  }
+  h1{
+    font-family: Marriwheather !important;
+    font-size: 20px;
+  }
+  h3{
+    font-family: Marriwheather !important;
+    font-size: 18px;
+  }
+
+  .searchBar{
+    padding: 5px;
+  }
+
+ 
+
+}

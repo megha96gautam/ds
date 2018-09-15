@@ -61,6 +61,7 @@ export class ProgramlistPage {
   }
 
   singleprogram(id:any){
+    //console.log(id);
     this.navCtrl.push(SingleprogramPage, {singleId: id});
   }
 

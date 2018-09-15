@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="ds-primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Blogs</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let b of bloglist" class="custom-padding">     
+  
+      <h1 (click)="gotoblog(b.id)" text-wrap>{{ b.title }}</h1>
+      <p>Posted On: {{ b.b_date }}</p>
+      
+    </ion-item>
+  </ion-list>
+</ion-content>

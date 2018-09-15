@@ -1,0 +1,18 @@
+  <ion-header>
+    <ion-navbar color="ds-primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Deepak The Inspiration</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+  <ion-content padding>
+    <h1>DEEPAK</h1>
+    <p>
+      <img src="../assets/imgs/profile.jpeg">
+    </p>
+    <p *ngFor="let a of about" [innerHTML]="a.about_us"></p>
+
+  </ion-content>

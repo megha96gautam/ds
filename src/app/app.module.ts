@@ -20,6 +20,7 @@ import { CategoriesPage } from '../pages/categories/categories';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {Media} from '@ionic-native/media';
 
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { SingleprogramPage } from '../pages/singleprogram/singleprogram';
@@ -36,6 +37,10 @@ import { ChangepasswordPage } from '../pages/changepassword/changepassword';
 import { ProgramregisterPage } from '../pages/programregister/programregister';
 import { TestimonialsPage } from '../pages/testimonials/testimonials';
 import { TallstoriesPage } from '../pages/tallstories/tallstories';
+import { SinglestoryPage } from '../pages/singlestory/singlestory';
+import { BloglistPage } from '../pages/bloglist/bloglist';
+import { PostsPage } from '../pages/posts/posts';
+import { AllsongsPage } from '../pages/allsongs/allsongs';
 
 
 
@@ -64,7 +69,11 @@ import { TallstoriesPage } from '../pages/tallstories/tallstories';
     ChangepasswordPage,
     ProgramregisterPage,
     TestimonialsPage,
-    TallstoriesPage
+    TallstoriesPage,
+    SinglestoryPage,
+    BloglistPage,
+    PostsPage,
+    AllsongsPage
 
   ],
   imports: [
@@ -98,12 +107,17 @@ import { TallstoriesPage } from '../pages/tallstories/tallstories';
     ChangepasswordPage,
     ProgramregisterPage,
     TestimonialsPage,
-    TallstoriesPage
+    TallstoriesPage,
+    SinglestoryPage,
+    BloglistPage,
+    PostsPage,
+    AllsongsPage
      
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Media,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthServiceProvider,
     SocialSharing

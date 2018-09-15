@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar color="ds-primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>{{ pageTitle }}</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding>
+  <ion-row>
+    <ion-col>
+        <iframe width="100%"
+            height="215"
+            [src]="trustedVideoUrl ? trustedVideoUrl : null"
+            (load)="trustedVideoUrl ? handleIFrameLoadEvent() : null"
+            frameborder="0"
+            allowfullscreen></iframe>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <div class="middleContent">
+          You cannot look at life in isolation. If you want to understand life you need to look at life in totality. If you look at it in isolation then there will always be a misunderstanding. In totality there is clarity.
+          Good Luck.. Bad Luck.. Who Knows!!  
+      </div>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

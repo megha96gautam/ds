@@ -1,0 +1,39 @@
+page-singleprogram {
+
+    .box-white{
+        background-color: white;
+        padding: 10px;
+      }
+      .box-red-1{
+        background-color: #4fc3f7;
+        padding: 10px;
+        color: white;
+        height: 150px;
+      }
+      ion-content{
+        background-color:#f7f7f7 !important;
+      }
+      h6{
+        font-size: 12px !important;
+      }
+      .small-text{
+        font-size: 10px;
+      }
+      ion-slide{
+        width: 75% !important;
+        margin-right: 5px;
+      }
+      a{
+        text-decoration: none;
+      }
+      h1{
+        font-family: Marriwheather !important;
+        font-size: 20px;
+      }
+      p{
+        font-family: Marriwheather !important;
+        font-size: 16px;
+        text-align: justify;
+      }
+
+}

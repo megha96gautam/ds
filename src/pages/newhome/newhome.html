@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="ds-primary">
+  <ion-toolbar color="ds-primary">
     <button ion-button menuToggle start>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -9,7 +9,7 @@
         <ion-icon name="share"></ion-icon>
       </button>
     </ion-buttons>
-  </ion-navbar>
+  </ion-toolbar>
 </ion-header>
 
 
@@ -64,6 +64,30 @@
     <ion-card (click)="viewCategories()">
       <img src="assets/imgs/homeimages/p03.jpg"/>
       <div class="card-title">Programs</div>
+      <div class="card-icon">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </div>
+    </ion-card>
+
+    <ion-card (click)="gotoMoralStories()">
+      <img src="assets/imgs/homeimages/p04.png"/>
+      <div class="card-title">Moral Stories</div>
+      <div class="card-icon">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </div>
+    </ion-card>
+
+    <ion-card (click)="gotoblog()">
+      <img src="assets/imgs/homeimages/p05.jpeg"/>
+      <div class="card-title">Blogs</div>
+      <div class="card-icon">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </div>
+    </ion-card>
+
+    <ion-card (click)="gototestimonials()">
+      <img src="assets/imgs/homeimages/p06.jpeg"/>
+      <div class="card-title">Testimonials</div>
       <div class="card-icon">
         <ion-icon name="arrow-forward"></ion-icon>
       </div>

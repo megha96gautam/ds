@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-navbar color="ds-primary">
+    <button ion-button menuToggle start>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Deepak The Inspiration</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="share()">
+        <ion-icon name="share"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-content class="card-background-page">
+
+    <ion-card style="height: 200px !important;">
+      <ion-slides>
+        <ion-slide *ngFor="let q of quotemaster">
+            <img src="{{imageUrl}}{{q.image}}"/>
+            <div class="card-icon">
+              <ion-icon name="arrow-forward" style="color: black !important;"></ion-icon>
+            </div>
+          </ion-slide>    
+      </ion-slides>
+      
+    </ion-card>
+
+    <ion-card (click)="goToupcoming()">
+      <img src="assets/imgs/homeimages/p02.jpg"/>
+      
+      <div class="card-title">Upcoming Programs</div>
+      <div class="card-icon">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </div>
+    </ion-card>
+  
+    <ion-card (click)="goTo('So6DU2qVzPQ')">
+      <img src="assets/imgs/homeimages/ds-2.jpg"/>
+      <div class="card-title">Transformation</div>
+      <div class="card-icon">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </div>
+    </ion-card>
+  
+    <ion-card (click)="goTochannel();">
+      <img src="assets/imgs/homeimages/videoforsimplifyinglife.jpg"/>
+      <div class="card-title">Simplifying Life</div>
+      <div class="card-icon">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </div>
+    </ion-card>
+
+    <ion-card (click)="goToMusic();">
+      <img src="assets/imgs/homeimages/musicforthesole.jpg"/>
+      <div class="card-title">Music for the Soul</div>
+      <div class="card-icon">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </div>
+    </ion-card>
+  
+    <ion-card (click)="viewCategories()">
+      <img src="assets/imgs/homeimages/p03.jpg"/>
+      <div class="card-title">Programs</div>
+      <div class="card-icon">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </div>
+    </ion-card>
+  
+  </ion-content>
+</ion-content>

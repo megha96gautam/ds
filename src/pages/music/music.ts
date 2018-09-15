@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 
 import { MfsPage } from '../mfs/mfs';
+import { AllsongsPage } from '../allsongs/allsongs';
 
 /**
  * Generated class for the MusicPage page.
@@ -19,20 +21,29 @@ import { MfsPage } from '../mfs/mfs';
 })
 export class MusicPage {
 
+ 
+
   pageTitle: string = 'Music For Soul';
   responseData:any;
   music_master:any;
   music_master1:any;
+  music_audio:any;
+  url:any;
+
+  imageUrl = "http://deepaktheinspiration.com/api/uploads/mfs/";
+  
 
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams, 
     public sanitizer: DomSanitizer,
-    public authServiceProvider: AuthServiceProvider ) {
+    public authServiceProvider: AuthServiceProvider,
+     ) {
      
 
       this.getMusic();
+      
 
     }
 
@@ -59,10 +70,15 @@ export class MusicPage {
     //Connection failed or something like that
   })
   }
+  
 
   goTo(mid){
        
     this.navCtrl.push(MfsPage, {param1: mid});
   }
+  gotoAllSongs(){
+    this.navCtrl.push(AllsongsPage);
+  }
+  
 
 }

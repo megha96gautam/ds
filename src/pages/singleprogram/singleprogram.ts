@@ -11,56 +11,53 @@ import { ProgramregisterPage } from '../programregister/programregister';
 })
 export class SingleprogramPage {
 
-  singleId:any;
-  responseData:any;
-  program:any;
-  programName:any;
+  singleId: any;
+  responseData: any;
+  program: any;
+  programName: any;
 
   imageUrl = "http://deepaktheinspiration.com/api/uploads/";
 
   constructor(
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public navParams: NavParams,
     public authServiceProvider: AuthServiceProvider) {
 
-      this.singleId = this.navParams.get('singleId');
-      console.log(this.singleId);
+    this.singleId = this.navParams.get('singleId');
+    //console.log(this.singleId);
 
-      this.getsingleprogram();
+    this.getsingleprogram();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SingleprogramPage');
   }
 
-  getsingleprogram(){
+  getsingleprogram() {
 
     let userData: any;
-    
-    
+
+
     //console.log(this.userDetails);
-   userData = {
-    p_id :this.singleId
-     
+    userData = {
+      p_id: this.singleId
+
     };
-      
+
     //API Document here
-    this.authServiceProvider.postData(userData, "programById").then((result)=>{
+    this.authServiceProvider.postData(userData, "programById").then((result) => {
       //console.log(result);
       this.responseData = result;
       this.program = this.responseData.data;
       this.programName = this.program[0].p_name;
-      console.log(this.program);
-      
-      
-    
-  }, (err)=>{
-    //Connection failed or something like that
-  })
+      //console.log(this.responseData);
+    }, (err) => {
+      //Connection failed or something like that
+    })
   }
 
-  programRegister(id:any){
-    this.navCtrl.push(ProgramregisterPage, {singleId: id});
+  programRegister(id: any) {
+    this.navCtrl.push(ProgramregisterPage, { singleId: id });
 
   }
 

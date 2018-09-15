@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="ds-primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Blogs</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+<ion-row style="background-color:white; padding:5px;" margin-top>
+  <ion-col *ngFor="let p of post">
+      <h1>{{ p.title }}</h1>
+      <p>Posted On: {{ p.b_date }}</p>
+      <p [innerHTML]="p.description"></p>
+  </ion-col>
+</ion-row>
+
+  
+</ion-content>

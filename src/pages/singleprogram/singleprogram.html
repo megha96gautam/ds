@@ -10,9 +10,9 @@
 
 <ion-content padding>
    
-  <ion-row style="background-color:white; padding:5px;">
+  <ion-row style="background-color:white; padding:5px;" margin-top>
     <ion-col *ngFor="let p of program">
-      <img src="{{ imageUrl }}{{ p.p_banner }}">
+      <img src="{{ imageUrl }}{{ p.p_banner }}" width="100%">
       <p [innerHTML]="p.description"></p>
         
     </ion-col>

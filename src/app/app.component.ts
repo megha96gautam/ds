@@ -23,11 +23,15 @@ import { ContactPage } from '../pages/contact/contact';
 import { MfsPage } from '../pages/mfs/mfs';
 import { ForgotPage } from '../pages/forgot/forgot';
 import { ChangepasswordPage } from '../pages/changepassword/changepassword';
-import {ProgramregisterPage} from '../pages/programregister/programregister';
+import { ProgramregisterPage } from '../pages/programregister/programregister';
+import { AllsongsPage } from '../pages/allsongs/allsongs';
 
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { TestimonialsPage } from '../pages/testimonials/testimonials';
 import { TallstoriesPage } from '../pages/tallstories/tallstories';
+import { SinglestoryPage } from '../pages/singlestory/singlestory';
+import { BloglistPage } from '../pages/bloglist/bloglist';
+import { PostsPage } from '../pages/posts/posts';
 
 
 @Component({
@@ -38,12 +42,12 @@ export class MyApp {
 
   rootPage: any = LoginPage;
 
-  pages: Array<{title: string, component: any}>;
-  currentUser:any;
+  pages: Array<{ title: string, component: any }>;
+  currentUser: any;
 
   constructor(
-    public platform: Platform, 
-    public statusBar: StatusBar, 
+    public platform: Platform,
+    public statusBar: StatusBar,
     public splashScreen: SplashScreen,
     private socialSharing: SocialSharing,
     public app: App,
@@ -53,16 +57,12 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: NewhomePage },
-      
       { title: 'Programs', component: CategoriesPage },
       { title: 'Simplifying Life', component: VideoPage },
-      { title: 'About', component: AboutPage},
-      { title: 'Contact Us', component: ContactPage},
-      { title: 'Logout', component: LogoutPage },
+      { title: 'About', component: AboutPage },      
+      { title: 'Contact Us', component: ContactPage },
       { title: 'Change Password', component: ChangepasswordPage },
-      {title:'Testimonials', component:TestimonialsPage},
-      {title:'Tall Stories', component:TallstoriesPage}
-      
+      { title: 'Logout', component: LogoutPage }
     ];
 
   }
@@ -73,51 +73,12 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-
-       //for backbutton problem
-  this.platform.registerBackButtonAction(() => {
-    // Catches the active view
-    let nav = this.app.getActiveNavs()[0];
-    let activeView = nav.getActive();                
-    // Checks if can go back before show up the alert
-    if(activeView.name === 'NewhomePage') {
-        if (nav.canGoBack()){
-            nav.pop();
-        } else {
-            const alert = this.alertCtrl.create({
-                title: 'Fechar o App',
-                message: 'Você tem certeza?',
-                buttons: [{
-                    text: 'Cancelar',
-                    role: 'cancel',
-                    handler: () => {
-                      this.nav.setRoot('NewhomePage');
-                      console.log('** Saída do App Cancelada! **');
-                    }
-                },{
-                    text: 'Fechar o App',
-                    handler: () => {
-                      this.logout();
-                      this.platform.exitApp();
-                    }
-                }]
-            });
-            alert.present();
-        }
-    }
-});
-//code for back button ends here
-
       this.currentUser = JSON.parse(localStorage.getItem('userData'));
-        this.rootPage = this.currentUser
-                      ? NewhomePage
-                      : LoginPage;
+      this.rootPage = this.currentUser
+        ? NewhomePage
+        : LoginPage;
     });
   }
-
- 
-
-
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
@@ -125,5 +86,5 @@ export class MyApp {
   }
   logout() {
     this.nav.setRoot('LoginPage');
-}
+  }
 }

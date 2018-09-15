@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
+import { SinglestoryPage } from '../singlestory/singlestory';
 
 /**
  * Generated class for the TallstoriesPage page.
@@ -18,7 +19,7 @@ export class TallstoriesPage {
 
   responseData:any;
   stories:any;
-  pageTitle:any = "Tall Stories";
+  pageTitle:any = "Moral Stories";
 
   constructor(
     public navCtrl: NavController, 
@@ -50,5 +51,8 @@ export class TallstoriesPage {
   }, (err)=>{
     //Connection failed or something like that
   })
+  }
+  gotostory(id:any){
+    this.navCtrl.push(SinglestoryPage, {singleId:id});
   }
 }

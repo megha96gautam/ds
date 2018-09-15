@@ -1,27 +1,50 @@
 <ion-header>
-    <ion-navbar color="ds-primary">
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-title>Music for the Soul</ion-title>
-    </ion-navbar>
-  </ion-header>
+  <ion-navbar color="ds-primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Music for the Soul</ion-title>
+  </ion-navbar>
+</ion-header>
 
 
 <ion-content padding>
-
+    <ion-row justify-content-start>
+        <ion-col col-12>
+          <h1>Music By Deepak</h1>
+        </ion-col>
+      </ion-row>
+      <ion-row justify-content-start>
+    
+    
+        <ion-col col-6>
+          <img src="assets/imgs/album/barsarehem.jpg" (click)="gotoAllSongs();"> 
+          <h4 (click)="gotoAllSongs();">Barsa Rehem</h4>
+        </ion-col>
+        <ion-col col-6>
+          &nbsp;
+        </ion-col>
+      </ion-row>
+      <ion-row justify-content-start>
+          <ion-col col-12>
+            <h1>Music Choosen By Deepak</h1>
+          </ion-col>
+        </ion-row>
+  <ion-row justify-content-start>
     <ion-list>
-        <ion-item *ngFor="let m of music_master" (click)="goTo(m.id)">
-          <ion-thumbnail item-start>
-            <img src="assets/imgs/{{ m.image }}">
-          </ion-thumbnail>
-          <h2>{{ m.tittle }}</h2>
-          <p>&nbsp;</p>
-          <button ion-button clear item-end (click)="goTo(m.id)">
-            <ion-icon name="arrow-forward"></ion-icon>
-          </button>
-        </ion-item>
-        
-      </ion-list>
+      <ion-item *ngFor="let m of music_master" (click)="goTo(m.id)">
+        <ion-thumbnail item-start>
+          <img src="{{imageUrl}}{{ m.image }}">
+        </ion-thumbnail>
+        <h2>{{ m.tittle }}</h2>
+        <p>&nbsp;</p>
 
+      </ion-item>
+
+    </ion-list>
+  </ion-row>
+  <ion-row>
+    <hr>
+  </ion-row>
+  
 </ion-content>

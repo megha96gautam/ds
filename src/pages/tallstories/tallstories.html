@@ -12,11 +12,8 @@
   <ion-list>
     <ion-item *ngFor="let s of stories" class="custom-padding">     
   
-      <h1>{{ s.title }}</h1>
+      <h1 (click)="gotostory(s.id)">{{ s.title }}</h1>
       <p>Posted On: {{ s.s_date }}</p>
-      <p>{{ s.text }}</p> 
-      
-      
       
     </ion-item>
   </ion-list>

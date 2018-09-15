@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar color="ds-primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Upcoming Programs</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-row margin-bottom>
+        <ion-col>
+          <div class="box-red-1">
+            <img src="assets/imgs/pr01.png">
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-list margin-top>
+        <ion-item *ngFor="let p of program_master">
+    
+          <h2>{{ p.p_name }}</h2>
+          <p>{{ p.p_date }}</p>
+          <p>{{ p.from_time }} - {{ p.to_time }}</p>
+          <p>{{ p.p_venue }}</p>
+          
+        </ion-item>
+        
+      </ion-list>
+
+</ion-content>
+<ion-footer>
+   <div col-12>
+      <div col-10 align-self-center style="color:darkslategrey;">
+          #22, Balaji Avenue, 2nd Floor, 5th Main Shankar Mutt Road, 
+          Bengaluru-560004, 
+          Email:info@deepaktheinspiration.com
+      </div>
+   </div>
+</ion-footer>

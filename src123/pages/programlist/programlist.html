@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-navbar color="ds-primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Programs</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-row>
+    <ion-col>
+      <div class="box-red-1">
+          <img src="assets/imgs/pr01.png">
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-list margin-top>
+    <ion-item *ngFor="let p of programlist">
+      <ion-thumbnail item-start>
+        <img src="{{ imageUrl }}{{ p.p_logo }}">
+      </ion-thumbnail>
+      <h2 (click)="singleprogram(p.id)">{{ p.p_name }}</h2>
+      <button ion-button clear item-end (click)="singleprogram(p.id)">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+      
+    </ion-item>
+    <!--
+
+      <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>CEO Of Life</h2>
+      <p>By Deepak Shinde</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>Body Mind And You</h2>
+      <p>By Deepak Shinde</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>Jashn-E-Life</h2>
+      <p>By Deepak Shinde</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>jashn-E-Fitness</h2>
+      <p>By Deepak Shinde</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>Joy Of Freedom</h2>
+      <p>By Deepak Shinde</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>Wondering Monks</h2>
+      <p>By Deepak Shinde</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>Masterstrokes</h2>
+      <p>By Deepak Shinde</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+    -->
+  </ion-list>
+</ion-content>

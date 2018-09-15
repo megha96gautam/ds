@@ -9,6 +9,9 @@ import { UpcomingPage } from '../upcoming/upcoming';
 import { SocialSharing } from '@ionic-native/social-sharing';
 
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
+import { TallstoriesPage } from '../tallstories/tallstories';
+import { BloglistPage } from '../bloglist/bloglist';
+import { TestimonialsPage } from '../testimonials/testimonials';
 
 /**
  * Generated class for the NewhomePage page.
@@ -85,6 +88,15 @@ export class NewhomePage {
   }
   goToupcoming(){
     this.navCtrl.push(UpcomingPage);
+  }
+  gotoMoralStories(){
+    this.navCtrl.push(TallstoriesPage);
+  }
+  gotoblog(){
+    this.navCtrl.push(BloglistPage);
+  }
+  gototestimonials(){
+    this.navCtrl.push(TestimonialsPage);
   }
 
   share(){

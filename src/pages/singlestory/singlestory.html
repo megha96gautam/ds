@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="ds-primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Story By Deepak</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-row style="background-color:white; padding:5px;" margin-top>
+      <ion-col *ngFor="let st of story">
+          <h1>{{ st.title }}</h1>
+          <p>Posted On: {{ st.s_date }}</p>
+          <p [innerHTML]="st.description" class="story"></p> 
+
+      </ion-col>
+  
+  </ion-row>
+</ion-content>
