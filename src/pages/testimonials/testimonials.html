@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar color="ds-primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -20,4 +20,28 @@
     
   </ion-item>
 </ion-list>
+</ion-content>
+ -->
+<ion-header>
+  <ion-navbar color="ds-primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ pageTitle }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+<ion-card *ngFor="let t of testimonial">
+  <ion-card-title style="margin-left: 20px; font-size: 20px;">
+    <!--{{ item.snippet.title }}-->
+    {{ t.name }}
+  </ion-card-title>
+  <ion-card-content>
+    <!--<img [src]="item.snippet.thumbnails.medium.url"/>-->
+    <img src="{{ imageUrl }}{{ t.image }}" width="100%">
+    <p  [innerHTML]{{ t.text }}></p> 
+  </ion-card-content>
+</ion-card>
 </ion-content>
